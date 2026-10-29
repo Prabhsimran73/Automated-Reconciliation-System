@@ -1,0 +1,558 @@
+// Mock Data for Automated Reconciliation System
+// BCA Minor Project 2026
+
+export const initialBankTransactions = [
+  {
+    id: "TXN1001",
+    date: "2026-08-01",
+    description: "NEFT Inward - Apex Infotech Solutions",
+    amount: 50000,
+    type: "Credit",
+    reference: "REF-NEFT-88901",
+    bankAccount: "HDFC Bank - Current A/c 50200012345678",
+    status: "Matched",
+    notes: "Client project milestone payment"
+  },
+  {
+    id: "TXN1002",
+    date: "2026-08-02",
+    description: "UPI Payment - Amazon Cloud Hosting AWS",
+    amount: 8500,
+    type: "Debit",
+    reference: "UPI-AWS-49210",
+    bankAccount: "HDFC Bank - Current A/c 50200012345678",
+    status: "Matched",
+    notes: "Monthly cloud infrastructure charges"
+  },
+  {
+    id: "TXN1003",
+    date: "2026-08-03",
+    description: "IMPS Outward - Synergy Office Supplies",
+    amount: 14500,
+    type: "Debit",
+    reference: "REF-IMPS-77312",
+    bankAccount: "HDFC Bank - Current A/c 50200012345678",
+    status: "Discrepancy",
+    discrepancyReason: "Amount Mismatch",
+    expectedLedgerAmount: 12500,
+    notes: "Variance of ₹2,000 against Ledger invoice"
+  },
+  {
+    id: "TXN1004",
+    date: "2026-08-04",
+    description: "RTGS Inward - Zenith Retail Corp",
+    amount: 120000,
+    type: "Credit",
+    reference: "REF-RTGS-99120",
+    bankAccount: "HDFC Bank - Current A/c 50200012345678",
+    status: "Matched",
+    notes: "Annual software licensing fee"
+  },
+  {
+    id: "TXN1005",
+    date: "2026-08-05",
+    description: "Salary Disbursal - Batch Aug-2026",
+    amount: 350000,
+    type: "Debit",
+    reference: "REF-SAL-88219",
+    bankAccount: "HDFC Bank - Current A/c 50200012345678",
+    status: "Matched",
+    notes: "Core engineering payroll transfer"
+  },
+  {
+    id: "TXN1006",
+    date: "2026-08-06",
+    description: "Bank Charges - HDFC Forex & AMC Fee",
+    amount: 1250,
+    type: "Debit",
+    reference: "CHG-HDFC-00129",
+    bankAccount: "HDFC Bank - Current A/c 50200012345678",
+    status: "Discrepancy",
+    discrepancyReason: "Missing Accounting Record",
+    notes: "Automatic quarterly maintenance charge not booked in ERP"
+  },
+  {
+    id: "TXN1007",
+    date: "2026-08-07",
+    description: "UPI Payment - Starbucks Corporate Catering",
+    amount: 3200,
+    type: "Debit",
+    reference: "UPI-SBUX-19401",
+    bankAccount: "HDFC Bank - Current A/c 50200012345678",
+    status: "Matched",
+    notes: "Board meeting refreshments"
+  },
+  {
+    id: "TXN1008",
+    date: "2026-08-08",
+    description: "NEFT Outward - BlueDart Logistics Courier",
+    amount: 4750,
+    type: "Debit",
+    reference: "REF-BLU-66102",
+    bankAccount: "HDFC Bank - Current A/c 50200012345678",
+    status: "Matched",
+    notes: "Hardware courier charges to regional offices"
+  },
+  {
+    id: "TXN1009",
+    date: "2026-08-09",
+    description: "Cheque Deposit - Delta Innovations Client",
+    amount: 65000,
+    type: "Credit",
+    reference: "CHQ-DEP-44910",
+    bankAccount: "HDFC Bank - Current A/c 50200012345678",
+    status: "Discrepancy",
+    discrepancyReason: "Date Mismatch",
+    notes: "Bank credited on 9th Aug, ERP recorded on 3rd Aug (6 days gap)"
+  },
+  {
+    id: "TXN1010",
+    date: "2026-08-10",
+    description: "UPI Received - TechVibe Consulting Services",
+    amount: 28000,
+    type: "Credit",
+    reference: "UPI-TECH-55210",
+    bankAccount: "HDFC Bank - Current A/c 50200012345678",
+    status: "Matched",
+    notes: "Technical advisory retainer fee"
+  },
+  {
+    id: "TXN1011",
+    date: "2026-08-11",
+    description: "ATM Cash Withdrawal - Branch Petty Cash",
+    amount: 15000,
+    type: "Debit",
+    reference: "ATM-WDL-99301",
+    bankAccount: "HDFC Bank - Current A/c 50200012345678",
+    status: "Unmatched",
+    notes: "Awaiting petty cash voucher reconciliation"
+  },
+  {
+    id: "TXN1012",
+    date: "2026-08-12",
+    description: "NEFT Inward - Global Ventures Pvt Ltd",
+    amount: 85000,
+    type: "Credit",
+    reference: "REF-NEFT-33921",
+    bankAccount: "HDFC Bank - Current A/c 50200012345678",
+    status: "Matched",
+    notes: "Retainer milestone 2"
+  },
+  {
+    id: "TXN1013",
+    date: "2026-08-13",
+    description: "Direct Debit - Tata Power Electricity Bill",
+    amount: 18450,
+    type: "Debit",
+    reference: "REF-PWR-88129",
+    bankAccount: "HDFC Bank - Current A/c 50200012345678",
+    status: "Matched",
+    notes: "Office facility utility bill"
+  },
+  {
+    id: "TXN1014",
+    date: "2026-08-14",
+    description: "IMPS Outward - FastTrack IT Solutions",
+    amount: 22000,
+    type: "Debit",
+    reference: "REF-IMPS-11928",
+    bankAccount: "HDFC Bank - Current A/c 50200012345678",
+    status: "Discrepancy",
+    discrepancyReason: "Reference Mismatch",
+    notes: "Bank ref 11928 vs Ledger logged under legacy PO-771"
+  },
+  {
+    id: "TXN1015",
+    date: "2026-08-15",
+    description: "Interest Credit - HDFC Sweep FD Deposit",
+    amount: 6420,
+    type: "Credit",
+    reference: "INT-CR-00219",
+    bankAccount: "HDFC Bank - Current A/c 50200012345678",
+    status: "Discrepancy",
+    discrepancyReason: "Missing Accounting Record",
+    notes: "Auto-accrued interest income not posted by accountant"
+  },
+  {
+    id: "TXN1016",
+    date: "2026-08-16",
+    description: "UPI Payment - Swiggy Office Lunch Meeting",
+    amount: 2450,
+    type: "Debit",
+    reference: "UPI-SWIG-88491",
+    bankAccount: "HDFC Bank - Current A/c 50200012345678",
+    status: "Matched",
+    notes: "Team sprint delivery lunch"
+  },
+  {
+    id: "TXN1017",
+    date: "2026-08-17",
+    description: "NEFT Outward - Bharti Airtel Corporate Internet",
+    amount: 9800,
+    type: "Debit",
+    reference: "REF-AIR-77402",
+    bankAccount: "HDFC Bank - Current A/c 50200012345678",
+    status: "Matched",
+    notes: "1 Gbps dedicated leased line bill"
+  },
+  {
+    id: "TXN1018",
+    date: "2026-08-18",
+    description: "RTGS Inward - Metro Infrastructure Corp",
+    amount: 210000,
+    type: "Credit",
+    reference: "REF-RTGS-55410",
+    bankAccount: "HDFC Bank - Current A/c 50200012345678",
+    status: "Matched",
+    notes: "Enterprise ERP rollout phase 1"
+  },
+  {
+    id: "TXN1019",
+    date: "2026-08-19",
+    description: "NEFT Outward - Urban Security Guard Services",
+    amount: 32000,
+    type: "Debit",
+    reference: "REF-SEC-99412",
+    bankAccount: "HDFC Bank - Current A/c 50200012345678",
+    status: "Matched",
+    notes: "Monthly security surveillance fee"
+  },
+  {
+    id: "TXN1020",
+    date: "2026-08-20",
+    description: "UPI Payment - Google Workspace & Cloud",
+    amount: 16800,
+    type: "Debit",
+    reference: "UPI-GOOG-33921",
+    bankAccount: "HDFC Bank - Current A/c 50200012345678",
+    status: "Matched",
+    notes: "Monthly productivity suite licenses"
+  },
+  {
+    id: "TXN1021",
+    date: "2026-08-21",
+    description: "IMPS Inward - Stellar Dynamics Refund",
+    amount: 11200,
+    type: "Credit",
+    reference: "REF-IMPS-88402",
+    bankAccount: "HDFC Bank - Current A/c 50200012345678",
+    status: "Unmatched",
+    notes: "Supplier excess advance refund pending book entry"
+  },
+  {
+    id: "TXN1022",
+    date: "2026-08-22",
+    description: "Cheque Clearance - SecureShield Cyber Insurance",
+    amount: 45000,
+    type: "Debit",
+    reference: "CHQ-OUT-11940",
+    bankAccount: "HDFC Bank - Current A/c 50200012345678",
+    status: "Matched",
+    notes: "Annual policy premium payment"
+  },
+  {
+    id: "TXN1023",
+    date: "2026-08-25",
+    description: "NEFT Outward - Nexa Consulting Advisory",
+    amount: 45200,
+    type: "Debit",
+    reference: "REF-NEFT-55019",
+    bankAccount: "HDFC Bank - Current A/c 50200012345678",
+    status: "Discrepancy",
+    discrepancyReason: "Amount Mismatch",
+    expectedLedgerAmount: 42500,
+    notes: "Transposition error: Bank debited ₹45,200 vs Ledger entered ₹42,500 (Variance ₹2,700)"
+  },
+  {
+    id: "TXN1024",
+    date: "2026-08-26",
+    description: "Direct Debit - Razorpay Gateway Processing Charges",
+    amount: 885,
+    type: "Debit",
+    reference: "RZP-FEE-88192",
+    bankAccount: "HDFC Bank - Current A/c 50200012345678",
+    status: "Discrepancy",
+    discrepancyReason: "Missing Accounting Record",
+    notes: "Monthly payment gateway fee auto-deducted, omitted from ledger vouchers"
+  }
+];
+
+export const initialAccountingRecords = [
+  {
+    id: "ACC1001",
+    date: "2026-08-01",
+    description: "Apex Infotech Solutions - Invoice INV-2026-089",
+    debit: 0,
+    credit: 50000,
+    reference: "REF-NEFT-88901",
+    accountHead: "Accounts Receivable - Client Sales",
+    status: "Matched",
+    matchedTxnId: "TXN1001",
+    notes: "Full payment received against milestone"
+  },
+  {
+    id: "ACC1002",
+    date: "2026-08-02",
+    description: "Amazon Web Services India - Cloud Server",
+    debit: 8500,
+    credit: 0,
+    reference: "UPI-AWS-49210",
+    accountHead: "Technology & Infrastructure Expense",
+    status: "Matched",
+    matchedTxnId: "TXN1002",
+    notes: "AWS cloud bill verified"
+  },
+  {
+    id: "ACC1003",
+    date: "2026-08-03",
+    description: "Synergy Office Supplies - Stationeries & Printer Ink",
+    debit: 12500,
+    credit: 0,
+    reference: "REF-IMPS-77312",
+    accountHead: "Office Supplies & Printing",
+    status: "Discrepancy",
+    matchedTxnId: "TXN1003",
+    notes: "Ledger has ₹12,500, Bank charged ₹14,500 (₹2,000 discrepancy)"
+  },
+  {
+    id: "ACC1004",
+    date: "2026-08-04",
+    description: "Zenith Retail Corp - Annual Software License",
+    debit: 0,
+    credit: 120000,
+    reference: "REF-RTGS-99120",
+    accountHead: "Software License Revenue",
+    status: "Matched",
+    matchedTxnId: "TXN1004",
+    notes: "License activation confirmed"
+  },
+  {
+    id: "ACC1005",
+    date: "2026-08-05",
+    description: "Staff Salaries & Wages - August 2026 Disbursal",
+    debit: 350000,
+    credit: 0,
+    reference: "REF-SAL-88219",
+    accountHead: "Salary & Employee Benefits",
+    status: "Matched",
+    matchedTxnId: "TXN1005",
+    notes: "Payroll batch cleared"
+  },
+  {
+    id: "ACC1007",
+    date: "2026-08-07",
+    description: "Starbucks Coffee - Corporate Hospitality Meeting",
+    debit: 3200,
+    credit: 0,
+    reference: "UPI-SBUX-19401",
+    accountHead: "Hospitality & Business Meals",
+    status: "Matched",
+    matchedTxnId: "TXN1007",
+    notes: "Expense claim submitted"
+  },
+  {
+    id: "ACC1008",
+    date: "2026-08-08",
+    description: "BlueDart Express Courier - Branch Shipping",
+    debit: 4750,
+    credit: 0,
+    reference: "REF-BLU-66102",
+    accountHead: "Courier & Freight Expenses",
+    status: "Matched",
+    matchedTxnId: "TXN1008",
+    notes: "Logistics tracking verified"
+  },
+  {
+    id: "ACC1009",
+    date: "2026-08-03",
+    description: "Delta Innovations - Cheque Received Deposit",
+    debit: 0,
+    credit: 65000,
+    reference: "CHQ-DEP-44910",
+    accountHead: "Accounts Receivable",
+    status: "Discrepancy",
+    matchedTxnId: "TXN1009",
+    notes: "Entered into books on 3rd Aug; Bank cleared on 9th Aug"
+  },
+  {
+    id: "ACC1010",
+    date: "2026-08-10",
+    description: "TechVibe Consulting - IT Architecture Advisory",
+    debit: 0,
+    credit: 28000,
+    reference: "UPI-TECH-55210",
+    accountHead: "Consulting Revenue",
+    status: "Matched",
+    matchedTxnId: "TXN1010",
+    notes: "UPI payment confirmed"
+  },
+  {
+    id: "ACC1012",
+    date: "2026-08-12",
+    description: "Global Ventures - Phase 2 Retainer Settlement",
+    debit: 0,
+    credit: 85000,
+    reference: "REF-NEFT-33921",
+    accountHead: "Client Project Billing",
+    status: "Matched",
+    matchedTxnId: "TXN1012",
+    notes: "Milestone invoice settled"
+  },
+  {
+    id: "ACC1013",
+    date: "2026-08-13",
+    description: "Tata Power Delhi - Head Office Electric Utility",
+    debit: 18450,
+    credit: 0,
+    reference: "REF-PWR-88129",
+    accountHead: "Electricity & Utility Expenses",
+    status: "Matched",
+    matchedTxnId: "TXN1013",
+    notes: "Direct debit verified"
+  },
+  {
+    id: "ACC1014",
+    date: "2026-08-14",
+    description: "FastTrack IT Solutions - Hardware Maintenance",
+    debit: 22000,
+    credit: 0,
+    reference: "PO-771-LEGACY",
+    accountHead: "Hardware Maintenance & Repairs",
+    status: "Discrepancy",
+    matchedTxnId: "TXN1014",
+    notes: "Reference ID mismatch between PO system and Bank ref"
+  },
+  {
+    id: "ACC1016",
+    date: "2026-08-16",
+    description: "Swiggy Corporate Catering - Sprint Lunch",
+    debit: 2450,
+    credit: 0,
+    reference: "UPI-SWIG-88491",
+    accountHead: "Staff Welfare & Catering",
+    status: "Matched",
+    matchedTxnId: "TXN1016",
+    notes: "Receipt attached"
+  },
+  {
+    id: "ACC1017",
+    date: "2026-08-17",
+    description: "Bharti Airtel Limited - Fiber Leased Line",
+    debit: 9800,
+    credit: 0,
+    reference: "REF-AIR-77402",
+    accountHead: "Internet & Telecommunication",
+    status: "Matched",
+    matchedTxnId: "TXN1017",
+    notes: "Monthly telecom payment"
+  },
+  {
+    id: "ACC1018",
+    date: "2026-08-18",
+    description: "Metro Infrastructure Corp - Project Milestone 1",
+    debit: 0,
+    credit: 210000,
+    reference: "REF-RTGS-55410",
+    accountHead: "Software Development Revenue",
+    status: "Matched",
+    matchedTxnId: "TXN1018",
+    notes: "RTGS confirmation verified"
+  },
+  {
+    id: "ACC1019",
+    date: "2026-08-19",
+    description: "Urban Security Guard Services - Facility Guarding",
+    debit: 32000,
+    credit: 0,
+    reference: "REF-SEC-99412",
+    accountHead: "Security & Facility Management",
+    status: "Matched",
+    matchedTxnId: "TXN1019",
+    notes: "Invoice verified"
+  },
+  {
+    id: "ACC1020",
+    date: "2026-08-20",
+    description: "Google Cloud India - GSuite & Cloud Storage",
+    debit: 16800,
+    credit: 0,
+    reference: "UPI-GOOG-33921",
+    accountHead: "Software Subscriptions",
+    status: "Matched",
+    matchedTxnId: "TXN1020",
+    notes: "Auto-renewed subscription"
+  },
+  {
+    id: "ACC1022",
+    date: "2026-08-22",
+    description: "SecureShield Insurance Brokers - Annual Cyber Cover",
+    debit: 45000,
+    credit: 0,
+    reference: "CHQ-OUT-11940",
+    accountHead: "Insurance Premium Expense",
+    status: "Matched",
+    matchedTxnId: "TXN1022",
+    notes: "Cheque cleared by bank"
+  },
+  {
+    id: "ACC1023",
+    date: "2026-08-23",
+    description: "Cheque Issued - Godrej Interior Fitouts (Unpresented)",
+    debit: 38500,
+    credit: 0,
+    reference: "CHQ-OUT-99104",
+    accountHead: "Office Renovation & Furniture",
+    status: "Discrepancy",
+    discrepancyReason: "Missing Bank Transaction",
+    notes: "Cheque issued on 23rd Aug, not yet presented to bank by vendor"
+  },
+  {
+    id: "ACC1024",
+    date: "2026-08-24",
+    description: "Vanguard Legal Associates - Retainer Fees",
+    debit: 25000,
+    credit: 0,
+    reference: "REF-LEG-00122",
+    accountHead: "Legal & Professional Charges",
+    status: "Unmatched",
+    notes: "Voucher booked, awaiting bank disbursement"
+  },
+  {
+    id: "ACC1025",
+    date: "2026-08-25",
+    description: "Nexa Consulting Advisory - Corporate Tax Review",
+    debit: 42500,
+    credit: 0,
+    reference: "REF-NEFT-55019",
+    accountHead: "Audit & Advisory Fees",
+    status: "Discrepancy",
+    matchedTxnId: "TXN1023",
+    notes: "Ledger booked ₹42,500 against bank debit ₹45,200"
+  }
+];
+
+export const monthlyReconciliationHistory = [
+  { month: "January", bankTxns: 1120, accountingRecords: 1110, matched: 1080, unmatched: 30, discrepancies: 10, matchRate: 96.4 },
+  { month: "February", bankTxns: 1150, accountingRecords: 1145, matched: 1105, unmatched: 40, discrepancies: 15, matchRate: 95.0 },
+  { month: "March", bankTxns: 1210, accountingRecords: 1200, matched: 1160, unmatched: 35, discrepancies: 15, matchRate: 95.8 },
+  { month: "April", bankTxns: 1180, accountingRecords: 1170, matched: 1125, unmatched: 45, discrepancies: 18, matchRate: 94.6 },
+  { month: "May", bankTxns: 1240, accountingRecords: 1225, matched: 1175, unmatched: 48, discrepancies: 22, matchRate: 94.3 },
+  { month: "June", bankTxns: 1280, accountingRecords: 1260, matched: 1215, unmatched: 42, discrepancies: 18, matchRate: 95.2 },
+  { month: "July", bankTxns: 1250, accountingRecords: 1230, matched: 1180, unmatched: 50, discrepancies: 20, matchRate: 94.4 }
+];
+
+export const defaultSettings = {
+  amountMatching: true,
+  dateMatching: true,
+  dateToleranceDays: 2,
+  referenceMatching: true,
+  descriptionMatching: true,
+  matchingThreshold: 80,
+  autoResolveExactMatches: true,
+  notifications: {
+    reconciliationCompleted: true,
+    newDiscrepancyDetected: true,
+    reportGenerated: true,
+    soundAlerts: false
+  }
+};
